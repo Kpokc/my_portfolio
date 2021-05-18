@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+#demo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: aliceblue;
+    width: 550px;
+    background-color: grey;
+    #demoText {
+        position: relative;
+    }
+}
+
+body {
+    background-color:  #1e2424;
+}
