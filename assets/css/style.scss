@@ -10,13 +10,16 @@
     top: 50%;
     transform: translate(-50%,-50%);
     color: aliceblue;
-    width: 550px;
-    background-color: grey;
-    #demoText {
-        position: relative;
-    }
+    width: 700px;
+    // #demoText {
+    //     position: relative;
+    // }
 }
 
 body {
     background-color:  #1e2424;
+}
+
+.underline {
+    //color: #1e2424;
 }

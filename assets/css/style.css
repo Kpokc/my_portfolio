@@ -12,12 +12,7 @@
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   color: aliceblue;
-  width: 550px;
-  background-color: grey;
-}
-
-#demo #demoText {
-  position: relative;
+  width: 700px;
 }
 
 body {
