@@ -15,7 +15,15 @@
   width: 700px;
 }
 
+#demo #demoText {
+  line-height: 0.8;
+}
+
 body {
   background-color: #1e2424;
+}
+
+.underline {
+  color: #666666;
 }
 /*# sourceMappingURL=style.css.map */

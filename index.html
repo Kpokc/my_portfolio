@@ -31,7 +31,7 @@
             [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
             [0,1,1,1,1,1,1,1,0,0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0],
             [0,0,0,0,1,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,1,1,0,1,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0],
-            [0,0,0,0,1,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,,1,0,1,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,],
+            [0,0,0,0,1,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0],
             [0,0,0,0,1,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0],
             [0,0,0,0,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0]
         ];
@@ -43,55 +43,31 @@
                     if (y < welcome[x].length){
                         if (welcome[x][y] == 0){
                         msg += "<span class='underline'>_</span>";
-                        $("#demoText").html(msg);
+                            //$("#demoText").html(msg).css("color","white");
                         }
                         if(welcome[x][y] == 1){
-                            msg += "#";
-                            $("#demoText").html(msg);
+                            msg += "<span class='hashtag'>#</span>";
+                            //$("#demoText").html(msg);
+                        }
+                        y++;
+                        if (y % 43 == 0){
+                            msg += "<br>";
+                            y = 0;
+                            x++;
+                            $(".add").html(msg);
                         }
                     }
                     
                 }
                 
-                setTimeout(type,200);
+                setTimeout(type,5);
             }
             setTimeout(type,200);
         
-
-            // for (var x = 0; x < welcome.length; x++){
-            //     msg += "<br>"
-                
-            //     for (var y = 0; y < welcome[x].length; y++){
-            //         //console.log(welcome[i][y])
-            //         if (welcome[x][y] == 0){
-            //             msg += "<span class='underline'>_</span>";
-            //             $("#demoText").html(msg);
-            //         }
-            //         if(welcome[x][y] == 1){
-            //             msg += "#";
-            //             $("#demoText").html(msg);
-            //         }
-                    
-            //     }
-            // }
         }
 
-        // var text = "Welcom<br>to my<br>portfolio!";
-        //     var i = 0;
-        //     var msg="";
-            
-        //     function type(){
-        //         if(i < text.length){
-        //             msg += text[i];
-        //             i++;
-        //             setTimeout(type,200);
-        //             $("#demoText").html(msg);
-        //         }
-        //     }
-        //     setTimeout(type,200);
-
         </script>
-    <div id="demo"><h1 id="demoText"></h1></div>
+    <div id="demo"><h1 id="demoText" class="add"></h1></div>
 
     
 </body>
